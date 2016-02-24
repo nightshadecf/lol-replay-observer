@@ -175,8 +175,8 @@ class ReplayObserverClient
             $lastChunkInfo['chunkId']            = $currentChunkId;
             $lastChunkInfo['nextChunkId']        = $metas['lastChunkId'];
             $lastChunkInfo['keyFrameId']         = $keyframeId;
-            // $lastChunkInfo['nextAvailableChunk'] = $currentChunkId == $firstChunkId + 6 ? 30000 : 100; // wait for full loading
-            $lastChunkInfo['nextAvailableChunk'] = 100; // wait for full loading
+            $lastChunkInfo['nextAvailableChunk'] = $currentChunkId == $firstChunkId + 6 ? 30000 : 100; // wait for full loading
+            //$lastChunkInfo['nextAvailableChunk'] = 100; // wait for full loading
         }
 
         // End game, stop downloading
