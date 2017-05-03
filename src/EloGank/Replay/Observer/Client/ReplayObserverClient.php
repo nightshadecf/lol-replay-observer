@@ -140,9 +140,9 @@ class ReplayObserverClient
         $firstChunkId = $metas['firstChunkId'];
 
         // A bug appears when endStartupChunkId = 3 and startGameChunkId = 5, the game won't load
-        //if ($metas['endStartupChunkId'] + 2 == $firstChunkId) {
-        //    $firstChunkId = $metas['startGameChunkId'] + 2;
-        //}
+        if ($metas['endStartupChunkId'] + 2 == $firstChunkId) {
+           $firstChunkId = $metas['startGameChunkId'] + 2;
+        }
 
         $keyframeId = $this->findKeyframeByChunkId($metas, $firstChunkId);
 
